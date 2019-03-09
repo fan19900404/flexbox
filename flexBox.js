@@ -12,7 +12,7 @@
     var div = document.createElement('div')
     div.style = 'height:1rem;width:1rem'
     document.body.appendChild(div)
-    if (div.offsetHeight !== fontSize) {
+    if (Math.abs(fontSize-div.offsetHeight)>1) {
       fontSize = (fontSize * fontSize / div.offsetHeight)
     }
     document.body.removeChild(div)
